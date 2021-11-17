@@ -23,6 +23,9 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="15dp"
         android:text="Actualizar"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/blue_main"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/actualizartarea_txt" />
 
@@ -33,6 +36,9 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="15dp"
         android:text="Completar"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/blue_main"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_actualizar" />
 
@@ -43,6 +49,9 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="15dp"
         android:text="Eliminar"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/blue_main"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_completar" />
 

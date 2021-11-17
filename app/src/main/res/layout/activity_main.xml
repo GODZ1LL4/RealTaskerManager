@@ -1,18 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".activities.MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/user_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_vertical"
+        app:srcCompat="@drawable/user" />
+
+    <EditText
+        android:id="@+id/eTxtCorreoLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:hint="Correo Electronico"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColorHint="@color/blue_second" />
+
+    <EditText
+        android:id="@+id/eTxt_PasswordLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColorHint="@color/blue_second" />
+
+    <Button
+        android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/blue_main"
+        android:fontFamily="sans-serif"
+        android:gravity="center_vertical"
+        android:text="Iniciar Sesion"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txtViewRegistrarUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:linksClickable="true"
+        android:text="¿No tienes una cuenta? Registrate ya" />
+
+    <TextView
+        android:id="@+id/txtViewBackPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:linksClickable="true"
+        android:text="¿Olvidaste tu contraseña?" />
+</LinearLayout>
+
