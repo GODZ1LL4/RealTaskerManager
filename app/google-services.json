@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1023677264250",
+    "project_id": "realtasker-89d3b",
+    "storage_bucket": "realtasker-89d3b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023677264250:android:9cfbb222b1c7d26ad6e6c3",
+        "android_client_info": {
+          "package_name": "com.example.realtasker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023677264250-hc98ji7t3is1q1prvj5d3ujuntnrpk8a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzcDiHSSK038fEeGU7_tDwWzJcZKBWzfQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023677264250-hc98ji7t3is1q1prvj5d3ujuntnrpk8a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
