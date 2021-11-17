@@ -29,7 +29,6 @@ class MainTaskActivity : AppCompatActivity() {
         binding = ActivityMainTaskBinding.inflate(layoutInflater)
 
 
-
         val recyclerView = binding.recyclerviewTareas
         val adapter = TareasAdapter(this)
 
@@ -60,7 +59,6 @@ class MainTaskActivity : AppCompatActivity() {
     }
 
 
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle item selection
         return when (item.itemId) {
@@ -76,7 +74,7 @@ class MainTaskActivity : AppCompatActivity() {
         }
     }
 
-    fun infoUsuario(){
+    fun infoUsuario() {
         val intent = Intent(this, InfoUsuarioActivity::class.java)
         startActivity(intent)
     }

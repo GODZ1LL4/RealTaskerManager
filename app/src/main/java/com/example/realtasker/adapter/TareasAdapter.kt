@@ -15,9 +15,6 @@ import com.example.realtasker.R
 import com.example.realtasker.model.Tarea
 
 
-
-
-
 class TareasAdapter internal constructor(
     context: Context
 ) : RecyclerView.Adapter<TareasAdapter.TaskViewHolder>() {

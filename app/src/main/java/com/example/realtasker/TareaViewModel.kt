@@ -9,11 +9,11 @@ import com.example.realtasker.data.TareasDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class TareaViewModel (application: Application) : AndroidViewModel(application) {
+class TareaViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val repository : TareaRepository
+    private val repository: TareaRepository
 
-    val allTareas : LiveData<List<Tarea>>
+    val allTareas: LiveData<List<Tarea>>
 
     init {
         val tareaDao = TareasDatabase.getInstance(application).tareaDao()
@@ -21,15 +21,15 @@ class TareaViewModel (application: Application) : AndroidViewModel(application) 
         allTareas = repository.allTareas
     }
 
-    fun insert(tarea :Tarea) = viewModelScope.launch(Dispatchers.IO) {
+    fun insert(tarea: Tarea) = viewModelScope.launch(Dispatchers.IO) {
         repository.insert(tarea)
     }
 
-    fun update(tarea :Tarea) = viewModelScope.launch(Dispatchers.IO) {
+    fun update(tarea: Tarea) = viewModelScope.launch(Dispatchers.IO) {
         repository.update(tarea)
     }
 
-    fun delete(tarea :Tarea) = viewModelScope.launch(Dispatchers.IO) {
+    fun delete(tarea: Tarea) = viewModelScope.launch(Dispatchers.IO) {
         repository.delete(tarea)
     }
 }

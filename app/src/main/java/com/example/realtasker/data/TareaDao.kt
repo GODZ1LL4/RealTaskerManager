@@ -5,7 +5,6 @@ import androidx.room.*
 import com.example.realtasker.model.Tarea
 
 
-
 @Dao
 interface TareaDao {
     @Query("SELECT * from tarea_table")

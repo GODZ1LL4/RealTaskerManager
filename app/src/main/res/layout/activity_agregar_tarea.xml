@@ -13,9 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_marginTop="30dp"
-        android:textColorHint="@color/blue_second"
         android:hint="Agregar Tarea"
         android:textAlignment="center"
+        android:textColorHint="@color/blue_second"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,10 +23,10 @@
         android:id="@+id/btn_guardar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/blue_main"
-        android:textColor="@color/white"
         android:layout_margin="15dp"
+        android:backgroundTint="@color/blue_main"
         android:text="Guardar"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edittxt_tarea" />
 

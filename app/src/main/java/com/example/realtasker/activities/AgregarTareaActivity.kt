@@ -20,7 +20,7 @@ class AgregarTareaActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get(TareaViewModel::class.java)
 
         binding.btnGuardar.setOnClickListener {
-            val tarea = Tarea(0,binding.edittxtTarea.text.toString(),false)
+            val tarea = Tarea(0, binding.edittxtTarea.text.toString(), false)
             viewModel.insert(tarea)
             BackMain()
         }
@@ -28,7 +28,7 @@ class AgregarTareaActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
-    fun BackMain(){
+    fun BackMain() {
         val intent = Intent(this, MainTaskActivity::class.java)
         startActivity(intent)
     }

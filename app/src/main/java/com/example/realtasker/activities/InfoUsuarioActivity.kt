@@ -30,7 +30,8 @@ class InfoUsuarioActivity : AppCompatActivity() {
             binding.eTxtCorreoUser.text = ("Correo: " + it.get("correo") as String?)
             binding.eTxtTelefonoUser.text = ("Telefono: " + it.get("telefono") as String?)
             binding.eTxtGeneroUser.text = ("Genero: " + it.get("genero") as String?)
-            binding.eTxtfechaUser.text = ("Fecha de nacimiento: " + it.get("fechanacimiento") as String?)
+            binding.eTxtfechaUser.text =
+                ("Fecha de nacimiento: " + it.get("fechanacimiento") as String?)
             binding.eTxtPaisUser.text = ("Pais: " + it.get("pais") as String?)
             binding.eTxtProvinciaUser.text = ("Provincia: " + it.get("provincia") as String?)
             binding.eTxtDireccionUser.text = ("Direccion: " + it.get("direccion") as String?)

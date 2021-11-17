@@ -17,17 +17,16 @@ class ActualizarTareaActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding   = ActivityActualizarTareaBinding.inflate(layoutInflater)
+        binding = ActivityActualizarTareaBinding.inflate(layoutInflater)
 
         var intent = intent
 
         tarea = intent.getParcelableExtra<Tarea>("tareaObject") as Tarea
         binding.actualizartareaTxt.setText(tarea.Descripcion)
 
-        if(tarea.Completada){
+        if (tarea.Completada) {
             binding.btnCompletar.setText("Reestablecer")
-        }
-        else{
+        } else {
             binding.btnCompletar.setText("Completada")
         }
 
@@ -41,12 +40,12 @@ class ActualizarTareaActivity : AppCompatActivity() {
 
         binding.btnEliminar.setOnClickListener {
             val _dialog = AlertDialog.Builder(this)
-            _dialog.setPositiveButton("Si"){_ , _ ->
+            _dialog.setPositiveButton("Si") { _, _ ->
                 viewModel.delete(tarea)
                 Toast.makeText(this, "Tarea eliminada", Toast.LENGTH_SHORT).show()
                 this.finish()
             }
-            _dialog.setNegativeButton("No"){_ , _ ->
+            _dialog.setNegativeButton("No") { _, _ ->
 
             }
 
@@ -56,13 +55,12 @@ class ActualizarTareaActivity : AppCompatActivity() {
         }
 
         binding.btnCompletar.setOnClickListener {
-            var actualizarTarea = Tarea(tarea.Id,tarea.Descripcion,tarea.Completada)
+            var actualizarTarea = Tarea(tarea.Id, tarea.Descripcion, tarea.Completada)
 
-            if(tarea.Completada){
+            if (tarea.Completada) {
                 actualizarTarea.Completada = false
                 actualizarTarea(actualizarTarea)
-            }
-            else{
+            } else {
                 actualizarTarea.Completada = true
                 actualizarTarea(actualizarTarea)
             }
@@ -72,13 +70,10 @@ class ActualizarTareaActivity : AppCompatActivity() {
     }
 
 
-
-
-    private fun actualizarTarea(tareaActualizada: Tarea){
-        if (binding.actualizartareaTxt.text.isEmpty() || binding.actualizartareaTxt.text.isBlank()){
+    private fun actualizarTarea(tareaActualizada: Tarea) {
+        if (binding.actualizartareaTxt.text.isEmpty() || binding.actualizartareaTxt.text.isBlank()) {
             Toast.makeText(this, "Debe llenar el campo", Toast.LENGTH_LONG).show()
-        }
-        else {
+        } else {
             viewModel.update(tareaActualizada)
             Toast.makeText(this, "Tarea actualizada con exito", Toast.LENGTH_SHORT).show()
             this.finish()
