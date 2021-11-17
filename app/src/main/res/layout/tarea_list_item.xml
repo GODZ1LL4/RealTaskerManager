@@ -24,8 +24,12 @@
                 android:id="@+id/textview_tarea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
                 android:text="Tareas..."
+                android:paddingBottom="5dp"
+                android:textAlignment="center"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
